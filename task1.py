@@ -1,12 +1,16 @@
-s1 = input().split()
-s2 = input().split()
-a = []
-for x in s1:
-    if x not in a:
-        a.append(x)
-b = []
-for x in s2:
-    if x not in b:
-        b.append(x)
-print(*a)
-print(*b)
+a = input()
+b = input()
+c = input()
+d = input()
+x = [a, b, c, d]
+m = -1
+r = ""
+for s in x:
+    n = 0
+    for i in s:
+        if i.isdigit():
+            n += int(i)
+    if n > m:
+        m = n
+        r = s
+print(r)
